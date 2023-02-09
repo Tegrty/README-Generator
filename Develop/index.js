@@ -1,7 +1,8 @@
-// TODO: Include packages needed for this application
+
 const inquirer = require('inquirer');
 const fs = require('fs');
-// TODO: Create an array of questions for user input
+
+// Array of questions for user
 inquirer.prompt([
   {
     type: "input",
@@ -51,11 +52,10 @@ inquirer.prompt([
   },
 ])
 
-
-// TODO: Create a function to write README file
+// console log users input
 .then((response) => {
     fs.writeFile('README.md', `
-    # ${response.title}
+# ${response.title}  ![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
 
 ## Description
     ${response.description}
@@ -75,8 +75,8 @@ inquirer.prompt([
 ## License
     ${response.license}
     
-## Contact
-    GitHub: [${response.github}](https://github.com/${response.github})
+## Questions?
+    GitHub: [${response.github}](https://github.com/${response.github}/)
     Email: ${response.email}
     `, (err) =>
         err ? console.error(err) : console.log('Success!')
