@@ -49,12 +49,36 @@ inquirer.prompt([
     message: "Please provide your email address.",
     name: "email",
   },
-]);
+])
 
 
 // TODO: Create a function to write README file
 .then((response) => {
-    fs.writeFile('README.md', `${response.title} ${response.description} ${response.installation} ${response.usage} ${response.contribution} ${response.test} ${response.license} ${response.github} ${response.email}`, (err) =>
+    fs.writeFile('README.md', `
+    # ${response.title}
+
+## Description
+    ${response.description}
+    
+## Installation
+    ${response.installation}
+    
+## Usage
+    ${response.usage}
+    
+## Contribution
+    ${response.contribution}
+    
+## Test
+    ${response.test}
+    
+## License
+    ${response.license}
+    
+## Contact
+    GitHub: [${response.github}](https://github.com/${response.github})
+    Email: ${response.email}
+    `, (err) =>
         err ? console.error(err) : console.log('Success!')
     );
 });
