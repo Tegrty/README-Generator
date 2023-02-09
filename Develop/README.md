@@ -1,25 +1,24 @@
 
-# fgsdfgsdfg  ![GitHub license](https://img.shields.io/badge/license-Apache-blue.svg)
+# Title of project               ![GitHub license](https://img.shields.io/badge/license-Apache-blue.svg)
 
 ## Description
-    asdfgsdfgasdrfgasedg
+Here is a description of the project
     
 ## Installation
-    dsrfgasergasedrg
+these are the instructions
     
 ## Usage
-    ageraergaerg
+usage info as well
     
 ## Contribution
-    gaergaergaer
+contribute pls
     
 ## Test
-    gaergaergaeg
+test pls pls
     
 ## License
-    Apache
-    
+[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)
+
 ## Questions?
-    GitHub: [aeraegaerg](https://github.com/aeraegaerg)
-    Email: aergaergaerg
-    
+GitHub: [Tegrty](https://github.com/Tegrty/)  
+Email: mario-019@hotmail.com

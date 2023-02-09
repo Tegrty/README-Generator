@@ -52,33 +52,50 @@ inquirer.prompt([
   },
 ])
 
+// Loop to explain describe each license
+
+
+
 // console log users input
 .then((response) => {
+let licenseInfo = "";
+
+if (response.license === "MIT") {
+  licenseInfo = `[MIT License](https://opensource.org/licenses/MIT)`;
+} else if (response.license === "Apache") {
+  licenseInfo = `[Apache License 2.0](https://opensource.org/licenses/Apache-2.0)`;
+} else if (response.license === "GPL") {
+  licenseInfo = `[GNU General Public License v3.0](https://opensource.org/licenses/GPL-3.0)`;
+} else if (response.license === "BSD") {
+  licenseInfo = `[BSD 3-Clause License](https://opensource.org/licenses/BSD-3-Clause)`;
+} else if (response.license === "None") {
+  licenseInfo = `None`;
+}
     fs.writeFile('README.md', `
-# ${response.title}  ![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
+# ${response.title}               ![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)
 
 ## Description
-    ${response.description}
+${response.description}
     
 ## Installation
-    ${response.installation}
+${response.installation}
     
 ## Usage
-    ${response.usage}
+${response.usage}
     
 ## Contribution
-    ${response.contribution}
+${response.contribution}
     
 ## Test
-    ${response.test}
+${response.test}
     
 ## License
-    ${response.license}
-    
+${licenseInfo}
+
 ## Questions?
-    GitHub: [${response.github}](https://github.com/${response.github}/)
-    Email: ${response.email}
-    `, (err) =>
+GitHub: [${response.github}](https://github.com/${response.github}/)  
+Email: ${response.email}`,
+ (err) =>
         err ? console.error(err) : console.log('Success!')
     );
 });
