@@ -52,13 +52,12 @@ inquirer.prompt([
   },
 ])
 
-// Loop to explain describe each license
-
-
-
 // console log users input
+
 .then((response) => {
 let licenseInfo = "";
+
+// conditional statement to determine which license badge to display and link to license
 
 if (response.license === "MIT") {
   licenseInfo = `[MIT License](https://opensource.org/licenses/MIT)`;
@@ -78,11 +77,12 @@ if (response.license === "MIT") {
 ${response.description}
     
 ## Installation
-${response.installation}
+    ${response.installation}
     
 ## Usage
+
 ${response.usage}
-    
+
 ## Contribution
 ${response.contribution}
     
@@ -102,8 +102,3 @@ Email: ${response.email}`,
 
 
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
