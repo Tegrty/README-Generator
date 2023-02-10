@@ -23,6 +23,7 @@ Save time and automate a portion of your work with The TEGRTY README-Generator. 
 
 * Node.js
  ---   
+ ![image](/Assets/README-Generator.gif)
 ## Usage 💻
 
 Usage of this application is possible for ANY markdown project that requires a professional layout. It is meant for quality and ease of use assurance. This application is available for ***Microsoft, Apple and Linux*** machines.
