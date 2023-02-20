@@ -75,6 +75,16 @@ if (response.license === "MIT") {
 
 ## Description
 ${response.description}
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribution](#contribution)
+* [Test](#test)
+* [License](#license)
+* [Questions](#questions)
+
     
 ## Installation
     ${response.installation}
